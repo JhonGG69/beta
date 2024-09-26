@@ -23,6 +23,7 @@
     user=$username
     password=$password
     ";
+    
     $conn = pg_connect($data_connection);
 
     if(!$conn){
