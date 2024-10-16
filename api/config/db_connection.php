@@ -12,7 +12,7 @@
     */
     $host = "localhost";  //127.0.0.1
     $username = "postgres"; 
-    $password = "Unicesmag";
+    $password = "JhonkigG";
     $dbname = "beta";
     $port = "5432";
     
