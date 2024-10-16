@@ -4,9 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register form</title>
-</head> 
-    <center><h3>Register</h3></center>
+</head>
+<style>
+    body {
+       font-family: 'Roboto', sans-serif;
+       font-size: 16px; /* Tamaño de letra base */
+       background: linear-gradient(to right, #a71ef1, #ec7310); /* Gradiente lineal de morado a verde */
+       color: white; /* Color del texto */
+       margin: 0;
+       padding: 0;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       height: 100vh;
+   } 
+   </style> 
+   
     <form name="register_form" action="backend/singnup.php" method="post">
+        <center><h3>Register</h3></center>
     
         <table border ="0" align="center">
             <tr><td><label>Email:</label></td></tr>
@@ -14,9 +29,9 @@
                 <tr><td><label>Password</label></td></tr>
                 <tr><td><input type="password" name = "passwd" placeholder="************" title="Please, you need a password" required></td></tr>
                 <tr><td><button>Register</button></td></tr>
-
+                
         </table>
+        <center><a href="https://127.0.0.1/beta/">Go to home</a></center>
     </form>
-<center><a href="https://127.0.0.1/beta/" target="_blank> ">Go to home</a></center>
 </body>
 </html>

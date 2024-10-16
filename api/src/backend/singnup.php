@@ -31,8 +31,10 @@ VALUES ('$email', '$enc_pass');
 //Execute the query
 $result = pg_query($conn, $query);
 if ($result) {
-    echo "<script>alert('Registration successful!')</script>";
-    header ('refresh:0; url=http://127.0.0.1/beta/api/src/login_form.html');
+    if($conn and $query == $result){
+        echo "<script>alert('Registration successful!')</script>";
+        header ('refresh:0; url=http://127.0.0.1/beta/api/src/login_form.html');
+    }
 } else {
     echo "Registration failed!";
 }
