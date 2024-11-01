@@ -5,7 +5,7 @@ function save_data_supabase($email,$passwd){
     $SUPABASE_URL = 'https://ehaoerfgnldsexbbpmes.supabase.co';
     $SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVoYW9lcmZnbmxkc2V4YmJwbWVzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzAzODg2OTAsImV4cCI6MjA0NTk2NDY5MH0.nT5hQDxOJhr_dpK-sivQvHj5oxlcurAiK8830frV-wo';
     
-    $url = "$SUPABASE_URL/reset/v1/users";
+    $url = "$SUPABASE_URL/rest/v1/users";
     $data= [
         "email" => $email,
         "password" => $passwd,
@@ -33,7 +33,7 @@ function save_data_supabase($email,$passwd){
         exit;
     }
 
-    echo "User has been created." . json_encode($response_data);
+    echo "User has been created."; //. json_encode($response_data);
 
 }
 //nombre de html ['email'];
@@ -75,5 +75,5 @@ if ($result) {
 } else {
     echo "Registration failed!";
 }
-pg_close($conn)
+pg_close($conn);
 ?>
